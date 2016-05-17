@@ -1,0 +1,28 @@
+
+<script>
+	var myVar;
+	var startTime = (Date.parse(new Date())).toString().substr(0,10);
+	var endTime  = 0;
+	//得到时间
+	function myTimer()
+	{
+		endTime = (Date.parse(new Date())).toString().substr(0,10);
+
+	}
+	//计时器
+	function startTimer(){
+		myVar = setInterval("myTimer()",1000);
+	}
+	//关闭计时器
+	function stopTimer(){
+		clearInterval(myVar);
+	}
+	//开始计时
+	startTimer();
+
+	function show(){
+		console.log(startTime);
+		console.log(endTime);
+	}
+
+</script>
